@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTV - Union Television</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--Encabezado-->
+
+    <nav class="nav navbar-expand-lg navBar">
+      <div class="containerImg ps-3 pt-1">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <img class="logo" th:src="@{/img/logo UTV.png}" alt="Img logo egg" />
+        </a>
+      </div>
+      <div class="d-flex justify-content-evenly w-100">
+        <li class="nav-item pt-5">
+          <a
+            class="btn btn-outline-success"
+            aria-current="page"
+            th:href="@{/abonado/lista}"
+            >Lista de Abonados</a
+          >
+        </li>
+        <li class="nav-item pt-5">
+          <a class="btn btn-outline-success" aria-current="page" th:href="@{/abonado/agregar}"
+            >Agregar Abonado</a
+          >
+        </li>
+        <li class="nav-item pt-5">
+          <a class="btn btn-outline-success" aria-current="page" th:href="@{/abonado/modificar}"
+            >Modificar Abonado</a
+          >
+        </li>
+        <li class="nav-item pt-5">
+          <a class="btn btn-outline-success" aria-current="page" th:href="@{/cuota/agregar}"
+            >Agregar Cuota</a
+          >
+        </li>
+        <li class="nav-item pt-5">
+          <a class="btn btn-outline-success" aria-current="page" th:href="@{/cuota/modificar}"
+            >Modificar Cuota</a
+          >
+        </li>
+      </div>
+    </nav>
+
+    <div class="m-5">
+      <form
+        action="/abonado/registro"
+        class="bg-warning border border-opacity-100 rounded d-flex row g-5 m-5"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="row-md-4">
+          <label for="validationServer03" class="form-label"
+            >Apellido y Nombre</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="validationServer01"
+            name="nombre"
+            required
+          />
+        </div>
+
+        <div class="row-md-6">
+          <label for="validationServer03" class="form-label">DNI</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationServer03"
+            aria-describedby="validationServer03Feedback"
+            name="dni"
+            required
+          />
+        </div>
+        <div class="row-md-6">
+          <label for="validationServer03" class="form-label">Domicilio</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationServer03"
+            aria-describedby="validationServer03Feedback"
+            name="domicilio"
+            required
+          />
+        </div>
+        <div class="col-12 p-4">
+          <button class="btn btn-primary" type="submit">Agregar</button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
